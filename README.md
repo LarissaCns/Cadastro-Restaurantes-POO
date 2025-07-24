@@ -57,7 +57,6 @@ Cadastro-Restaurantes-POO/
 ```
 
 ## ✍️ Autora
-Larissa Cristina
-Projeto feito como parte dos estudos de Python com foco em orientação a objetos.
 
-
+-Larissa Cristina
+-Projeto feito como parte dos estudos de Python com foco em orientação a objetos.
