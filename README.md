@@ -49,8 +49,10 @@ python main.py
 
 ```bash
 Cadastro-Restaurantes-POO/
-├── main.py
-├── restaurante.py
+├── app.py                     # Arquivo principal com o menu e execução do programa
+├── modelos/
+│   ├── restaurante.py         # Classe Restaurante
+│   └── avaliacao.py          # Classe Avaliacao
 └── README.md
 ```
 
