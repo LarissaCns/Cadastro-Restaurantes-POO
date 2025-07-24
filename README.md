@@ -29,16 +29,19 @@ Este é um projeto simples feito em Python utilizando os princípios da **Progra
 
 ```bash
 git clone https://github.com/LarissaCns/Cadastro-Restaurantes-POO.git
+```
 
 2. Acesse a pasta do projeto:
 
 ```bash
 cd Cadastro-Restaurantes-POO
+```
 
 3. Execute o arquivo principal:
 
 ```bash
 python main.py
+```
 
 |Obs.: Certifique-se de ter o Python 3 instalado.
 
@@ -49,6 +52,7 @@ Cadastro-Restaurantes-POO/
 ├── main.py
 ├── restaurante.py
 └── README.md
+```
 
 ## ✍️ Autora
 Larissa Cristina
