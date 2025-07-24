@@ -9,6 +9,12 @@ class Restaurante:
     restaurantes = []
 
     def __init__(self, nome, categoria, ativo=False):
+        """
+        Inicializa uma instância de Restaurante.
+
+        :param nome(str): Nome do restaurante.
+        :param categoria(str): Categoria do restaurante (ex: Gourmet, Mexicano, etc).
+        """
         self._nome = nome
         self._categoria = categoria
         self._ativo = ativo
@@ -40,15 +46,23 @@ class Restaurante:
         self._ativo = not self._ativo
 
     def receber_avaliacao(self, cliente, nota):
-        """Recebe uma avaliação de um cliente."""
+        """
+        Recebe uma avaliação de um cliente.
+
+        :param cliente(str): Nome do cliente que fez a avaliação.
+        :param nota(int): Nota dada pelo cliente (de 1 a 5).
+        
+        """
+        if not isinstance(nota, (int, float)) or not 1 <= nota <= 5:
+            raise ValueError("A nota deve ser um número entre 1 e 5.")
         avaliacao = Avaliacao(cliente, nota)
         self.avaliacao.append(avaliacao)
 
     @property
     def media_avaliacoes(self):
-        """Calcula a média das avaliações do restaurante."""
+        """Calcula a média das avaliações recebidas pelo restaurante."""
         if not self.avaliacao:
-            return 0
+            return "-"
         soma_das_notas = sum(avaliacao.nota for avaliacao in self.avaliacao)
         quantidade_de_notas = len(self.avaliacao)
         media = round(soma_das_notas / quantidade_de_notas, 1)
@@ -67,8 +81,3 @@ class Restaurante:
                 f'{str(restaurante.media_avaliacoes).ljust(25)} | '
                 f'{"Ativo" if restaurante.ativo else "Inativo"}'
             )
-
-
-# restaurante_pizza = Restaurante("Pizzaria Bella Napoli", "Pizzaria")
-# restaurante_pizza.alternar_estado()
-# Restaurante.lista_restaurantes()
