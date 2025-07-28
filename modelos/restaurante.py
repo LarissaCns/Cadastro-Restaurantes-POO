@@ -19,6 +19,7 @@ class Restaurante:
         self._categoria = categoria
         self._ativo = ativo
         self.avaliacao = []
+        self.cardapio = []
         Restaurante.restaurantes.append(self)
 
     @property
@@ -81,3 +82,11 @@ class Restaurante:
                 f'{str(restaurante.media_avaliacoes).ljust(25)} | '
                 f'{"Ativo" if restaurante.ativo else "Inativo"}'
             )
+
+    def adicionar_bebida_cardapio(self, bebida):
+        """Adiciona bebida no cardápio do restaurante."""
+        self.cardapio.append(bebida)
+
+    def adicionar_prato_cardapio(self, prato):
+        """Adiciona prato no cardápio do restaurante."""
+        self.cardapio.append(prato)

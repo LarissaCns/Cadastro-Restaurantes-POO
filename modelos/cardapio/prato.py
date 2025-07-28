@@ -13,3 +13,7 @@ class Prato(ItemCardapio):
     def __init__(self, nome, preco, descricao):
         super().__init__(nome, preco)
         self.descricao = descricao
+
+    def __str__(self):
+        """Retorna uma representação em string do prato."""
+        return f"Prato: {self.nome}, Preço: R${self.preco:.2f}, Descrição: {self.descricao}"

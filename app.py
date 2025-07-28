@@ -1,16 +1,20 @@
 """app.py"""
 from modelos.restaurante import Restaurante
+from modelos.cardapio.bebida import Bebida
+from modelos.cardapio.prato import Prato
 
 restaurante_praca = Restaurante("Restaurante Praça", "Gourmet")
-restaurante_mexicano = Restaurante("Restaurante Mexicano", "Mexicano")
-restaurante_japones = Restaurante("Restaurante Japonês", "Japonesa")
-restaurante_praca.receber_avaliacao("Cliente 1", 5)
-
-restaurante_mexicano.alternar_estado()
+bebida_suco = Bebida('Suco de Melancia', 5.00, 'grande')
+prato_pasta = Prato('Pasta à Carbonara', 30.00, 'Deliciosa pasta com molho cremoso e bacon.')
+restaurante_praca.adicionar_bebida_cardapio(bebida_suco)
+restaurante_praca.adicionar_prato_cardapio(prato_pasta)
 
 def main():
     """Main function to run the application."""
-    Restaurante.lista_restaurantes()
+    print(bebida_suco)
+    print(prato_pasta)
+    restaurante_praca.lista_restaurantes()
+
 
 
 if __name__ == "__main__":
